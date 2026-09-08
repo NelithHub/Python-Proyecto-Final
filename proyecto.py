@@ -18,5 +18,5 @@ if telefono_valido:
 else:
     print("numero de telefono invalido")
 
-
+#Como empieza el cupon (Validar)
 
