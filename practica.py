@@ -77,16 +77,85 @@
 
 #print (mensaje[0])
 
-nota = 85
+#nota = 85
 
-if nota >= 90:
+#if nota >= 90:
 
-    print("Excelente.")
+#    print("Excelente.")
 
-elif nota >= 75:
+#elif nota >= 75:
 
-    print("Muy bien.")
+#    print("Muy bien.")
 
-else:
+#else:
 
-    print("Suficiente.")
+#    print("Suficiente.")
+
+#Bucle while 
+
+#contador = 1
+#while contador <=5:
+#    print(f"Este es el intento numero {contador}")
+#    contador +=1 # contador = contador + 1 - (nunca crear un bucle infinito )
+
+#nombre = ""
+#while nombre == "":
+#    nombre = input("Ingresa tu nombre").strip()
+#    if nombre == "":
+#        print("El nombre no puede estar vacio. Intenta de nuevo")
+
+##intentos = 0
+#max_intentos = 3
+#user_correcto = "admin"
+#user_encontrado = False
+
+#while intentos < max_intentos and not user_encontrado:
+#    user_ingresado = input("Ingrese su usuario: ")
+
+#    if user_ingresado == user_correcto:
+#        print("Acceso exitoso")
+#        user_encontrado = True
+#    else:
+#        intentos +=1
+#        print("Usuario incorrecto")
+
+#        if intentos < max_intentos:
+#            print(f"Te quedan {max_intentos - intentos} intentos")
+
+#if not user_encontrado:
+#    print(f"Se agotanron los {max_intentos} intentos. Acceso denegado")
+
+
+#----------------------------------------------------------------------
+
+# Tipo de datos en listas - se definene entre "[]" y se separan por comas
+#lista = ["manzana", "banana", "naranja"]
+
+lista_num = [10,5,20,7,30,40]
+
+#lista_global = ["ana",True,20,{1,2,3},"12",3.14," "]
+
+#print(lista_global[5])
+
+#print(len(lista_num))
+
+indice = 0
+
+while indice < len(lista_num):
+    print(f"indice {indice} --- {lista_num[indice]}")
+    if lista_num[indice] % 2== 0:
+        print(lista_num[indice])
+
+    indice+=1
+
+#Sentencia Break (rompe el while o fuerza a salir del bucle) y continue (salta a la siguiente iteracion del bucle)
+
+numero_buscado = 40
+encontrado = False
+while indice < len(lista_num):
+    if lista_num[indice] == numero_buscado:
+        print(lista_num[indice], "encontrado")
+        break
+
+    print(f"Indice {indice} --- el elemento en ese indice es: {lista_num[indice]}")
+    indice +=1
