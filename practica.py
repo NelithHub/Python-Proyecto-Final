@@ -268,7 +268,7 @@
 #for producto in productos:
 #    print(producto)
 
-productos = ["manzana", "naranjas", "anana", "bebidas", ["banannas", "Ecuador", "P&G"]]
+#productos = ["manzana", "naranjas", "anana", "bebidas", ["banannas", "Ecuador", "P&G"]]
 
 #for producto in productos:
 #    print (producto)
@@ -277,10 +277,116 @@ productos = ["manzana", "naranjas", "anana", "bebidas", ["banannas", "Ecuador", 
 #            print(prod)
 
 #for i in range(len(productos)):
-    print(f"indice {i} - elemento: {productos[i]}")
+#    print(f"indice {i} - elemento: {productos[i]}")
 
 
 #range(inicio,fin, paso) genera saltando lugares
 
-for i in range(10,0,-1):
-    print(i)
+#for i in range(10,0,-1):
+#    print(i)
+
+#CLASE PRACTICA 06
+
+# =====================================================================
+#                 CONSIGNA: SISTEMA DE GESTIÓN DE BIBLIOTECA
+# =====================================================================
+#
+# Una biblioteca de barrio necesita un pequeño programa para llevar el
+# registro de sus libros. Desarrollá un programa en Python que cumpla
+# con los siguientes requerimientos:
+#
+# * Ingreso de datos de libros: El sistema debe permitir ingresar los
+#   datos básicos de los libros: título, autor y año de publicación
+#   (solo números). Estos datos deben almacenarse en una lista, donde
+#   cada libro sea representado como una sublista de tres elementos
+#   (título, autor y año).
+#
+# * Visualización de libros registrados: El programa debe incluir una
+#   funcionalidad para mostrar en pantalla todos los libros ingresados.
+#   La información debe presentarse de manera ordenada y legible, con
+#   cada libro numerado. Si no hay libros cargados, debe informarlo.
+#
+# * Búsqueda de libros: El sistema debe permitir buscar libros por su
+#   título, sin importar mayúsculas o minúsculas. Si encuentra
+#   coincidencias, debe mostrar la información completa de los libros
+#   que coincidan. Si no hay coincidencias, debe informar que no se
+#   encontraron resultados.
+#
+# * Menú principal: Todas las opciones deben ofrecerse desde un menú que
+#   se repita hasta que el usuario elija la opción "Salir".
+
+#     print("========== BIBLIOTECA ==========")
+#     print("1. Ingresar libro")
+#     print("2. Mostrar libros registrados")
+#     print("3. Buscar libro por título")
+#     print("4. Salir")
+#     print("================================")
+
+
+libros = []
+opcion = ""
+
+while opcion != "4":
+    print("========== BIBLIOTECA ==========")
+    print("1. Ingresar libro")
+    print("2. Mostrar libros registrados")
+    print("3. Buscar libro por título")
+    print("4. Salir")
+    print("================================")
+
+    opcion = input("Seleccione una opción: ").strip()
+
+    #--------------Ingreso-----------------
+    if opcion == "1":
+        titulo = input("Titulo: ").strip()
+        while titulo == "":
+            print("El titulo no puede estar vacio")
+            titulo = input("Titulo: ").strip()
+
+        autor = input("Autor: ").strip()
+        while autor == "":
+            print("El autor no puede estar vacio")
+            autor = input("autor: ").strip()
+
+        anio = input("Año: ").strip()
+        while not anio.isdigit():
+            print("El año no puede estar vacio")
+            anio = input("Año: ").strip()
+
+        libros = libros + [[titulo, autor, anio]]
+        print("Libro registrado con exito")
+
+    #Mostrar los libros ----------
+    elif opcion == "2":
+        if libros == []:
+            print("No Hay libros en la lista")
+        else:
+            numero = 1
+            for libro in libros:
+                print(numero, "Titulo", libro[0].upper(), "| Autor:", libro[1].title(), "| Año", libro[2])
+                numero += 1
+            print("---------------------")
+
+    #Buscar libro ----------------
+    elif opcion == "3":
+        if libros == []:
+            print("No Hay libros en la lista")
+        else:
+            buscado = input("Ingresa el titulo a buscar: ").strip().lower()
+            encontrado = 0
+            for libros in libros:
+                if buscado in libro[0].lower():
+                    encontrado = encontrado + 1
+                    print("Titulo", libro[0].upper(), "| Autor:", libro[1].title(), "| Año", libro[2])
+            if encontrado == 0:
+                print("No se encontraron resultados")
+            else:
+                print("Se encontraron", encontrado, "coincidencia/s")
+        
+
+    #Despedida -------------------
+    elif opcion == "4":
+        print("Gracias por usar el sistema de la biblioteca")
+
+    else:
+        print("Opcion invalida. Elegi una opción del 1 al 4")
