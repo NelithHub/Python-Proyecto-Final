@@ -480,9 +480,9 @@
 #Tuplas (similares a las listas, todo lo que se pueden hacer en las listas con las tuplas no)
 #()
 
-tupla1 = (10,20,30, [])
+# tupla1 = (10,20,30, [])
 
-tupla2 = 40,50,60
+# tupla2 = 40,50,60
 
 #las tuplas pueden guardar todo tipo de datos (numeros enteros, decimales, etc.) pero no se puede modificar dentro de la tupla solo se puede buscar
 
@@ -497,9 +497,66 @@ tupla2 = 40,50,60
 #print(tupla1[2])
 
 
-lista_tupla = list(tupla1)
-print(lista_tupla)
-lista_tupla = tuple(tupla1)
-print(lista_tupla)
+# lista_tupla = list(tupla1)
+# print(lista_tupla)
+# lista_tupla = tuple(tupla1)
+# print(lista_tupla)
 
-tupla3 = (1,)
+# tupla3 = (1,)
+
+#------------------------------------------------------------------------------------------------
+
+#CLASE 08
+#DICCIONARIOS
+#{clave : valor}
+
+# producto = {
+#     "nombre" : "Manzana",
+#     "precio" : 150,
+#     "stoke" : 25,
+#     "categoria" : "fruta",
+#     "en_oferta" : False
+# }
+
+#diccionario["clave"] = valor
+
+# print(producto)
+# print("precio", producto["precio"])
+# print("categoria", producto["categoria"])
+# print("nombre", producto["nombre"])
+
+
+# estudiante = {
+#     "DNI":"12345678",
+#     "notas" : []
+# }
+
+#notas_marzo = input()
+
+#estudiante["notas"].append(notas_marzo)
+
+# estudiante["nombre"] = "Emiliano"
+# print(estudiante)
+
+# estudiante["nombre"] = "Pepe"
+
+# print(estudiante)
+
+persona = {
+    "nombre" : "Juan",
+    "dni" : 12345678,
+}
+
+edades = {
+    "Juan" : 25,
+    "Ana" : 30,
+    "Pedro" : 32,
+}
+print(edades)
+
+# edad = edades [persona["nombre"]]
+
+# print(edad)
+
+for edad in edades.values():
+    print( edad)
