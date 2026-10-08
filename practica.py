@@ -542,21 +542,21 @@
 
 # print(estudiante)
 
-persona = {
-    "nombre" : "Juan",
-    "dni" : 12345678,
-}
+# persona = {
+#     "nombre" : "Juan",
+#     "dni" : 12345678,
+# }
 
-edades = {
-    "Juan" : 25,
-    "Ana" : 30,
-    "Pedro" : 32,
-}
-print(edades)
+# edades = {
+#     "Juan" : 25,
+#     "Ana" : 30,
+#     "Pedro" : 32,
+# }
+# print(edades)
 
 # edad = edades [persona["nombre"]]
 
 # print(edad)
 
-for edad in edades.values():
-    print( edad)
+# for edad in edades.values():
+#     print( edad)

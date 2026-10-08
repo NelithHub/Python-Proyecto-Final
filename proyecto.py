@@ -97,7 +97,12 @@ while opcion != "5":
         #precio = int(precio)
         #productos = productos + [[nombre, categoria, precio]]
 
-        productos.append([nombre, categoria, int(precio)])
+#DICCIONARIO
+        productos.append = {
+            "nombre" : nombre,
+            "categoria" : categoria,
+            "precio" : precio
+        }
 
     elif opcion == "2":
         print("Listar productos")
@@ -105,7 +110,7 @@ while opcion != "5":
             print("No hay productos cargados")
         else:
             for producto in productos:
-                print(f"Nombre: {nombre} /n Categoria: {categoria} /n Precio: {precio}")
+                print(f"ID: {numero} /n Nombre: {producto['nombre']} /n Categoria: {producto['categoria']} /n Precio: ${producto['precio']}")
                 numero = numero + 1
 
     elif opcion == "3":
@@ -118,8 +123,8 @@ while opcion != "5":
                 print("El campo de busqueda no debe vacio")
                 busqueda = input("Ingresa el nombre del producto").strip()
             for producto in productos:
-                if busqueda.lower() in producto[0].lower():
-                    print(f"ID:{numero} /n Nombre: {producto[0]} /n Categoria: {producto[1]} /n Precio: {producto[2]}")
+                if busqueda.lower() in producto['nombre'].lower():
+                    print(f"ID:{numero} /n Nombre: {producto['nombre']} /n Categoria: {producto['categoria']} /n Precio: ${producto['precio']}")
                     encontrado = encontrado + 1
                     numero += 1
 
