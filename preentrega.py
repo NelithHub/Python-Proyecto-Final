@@ -1,4 +1,4 @@
-Inventario_artistica = []
+inventario_artistica = []
 opcion = ""
 
 while opcion != "5":
@@ -18,17 +18,17 @@ while opcion != "5":
 
         nombre = input("Ingresa el nombre del producto: ").strip()
         while nombre == "":
-            print("El nombre no puede estar vacio")
+            print("El campo no puede quedar vacio")
             nombre = input("Ingresa el nombre del producto: ").strip()
 
         categoria = input("Ingresa categoria de tu producto: ").strip()
         while categoria == "":
-            print("La categoria no puede estar vacio")
+            print("El campo no puede quedar vacio")
             categoria = input("ingresa la categoria del producto: ").strip()
 
         precio = input("Ingresa el precio del producto, numero entero").strip()
         while not precio.isdigit() or int(precio) == 0:
-            print("El precio debe ser un numero entero mayor a 0")
+            print("El valor debe mayor a 0 (sin centavos)")
             precio = input("Ingresa el precio del producto, numero entero").strip()
 
 
