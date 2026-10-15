@@ -560,3 +560,36 @@
 
 # for edad in edades.values():
 #     print( edad)
+
+
+
+#-------------------------------------------------------------
+#CLASE 10
+
+def titulo(texto):
+    print("/n" + "=" * 65)
+    print(f"{texto}")
+    print("=" * 65)
+
+
+def mostrar_bienvenida(nombre):
+    print(f"Bienvenid@s, {nombre}")
+
+def paso_1():
+    titulo("Paso 1: Funciones sin return")
+    mostrar_bienvenida("Ana")
+
+    resultado = mostrar_bienvenida("Ana")
+    print("Que guardo la variable resultado", resultado)
+
+#paso_1()
+
+def ejemplo_return_finaliza():
+    print("Esta linea si se ejecuta")
+    return "valor devuelto"
+    print("Esta linea no se ejecuta despues de un Return")
+
+#ejemplo_return_finaliza()
+
+valor_guardado = ejemplo_return_finaliza()
+print(valor_guardado)
