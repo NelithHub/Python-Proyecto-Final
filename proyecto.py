@@ -62,25 +62,40 @@
 
 #______________________________________________________________________________________________________________________
 # PREENTREGA
-productos = []
-opcion = ""
 
-while opcion != "5":
+# while opcion != "5":    
+#   print("1. Agregar productos")
+    # print("2. Mostrar productos")
+    # print("3. Buscar producto")
+    # print("4. Eliminar producto")
+    # print("5. Salir")
+    # opcion = input("Elige una opcion (1-5): ").strip()
 
+def mostrar_menu():
     print("1. Agregar productos")
     print("2. Mostrar productos")
     print("3. Buscar producto")
     print("4. Eliminar producto")
     print("5. Salir")
     opcion = input("Elige una opcion (1-5): ").strip()
+    return opcion
 
-    if opcion == "1":
+def pedir_texto(mensaje, mensaje_error):
+    texto = input(mensaje).strip()
+    while texto == "":
+        print(mensaje_error)
+        texto = input(mensaje).strip()
+
+productos = []
+opcion = ""
+
+if opcion == "1":
         print("Agregar producto")
 
-        nombre = input("Ingresa el nombre del producto: ").strip()
-        while nombre == "":
-            print("El nombre no puede estar vacio")
-            nombre = input("Ingresa el nombre del producto: ").strip()
+        # nombre = input("Ingresa el nombre del producto: ").strip()
+        # while nombre == "":
+        #     print("El nombre no puede estar vacio")
+        #     nombre = input("Ingresa el nombre del producto: ").strip()
 
 
         categoria = input("Ingresa la categoria de tu producto: ").strip()
