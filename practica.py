@@ -600,6 +600,24 @@
 
 # import nombre_modulo
 
-import random
+# import random
 
-random,randint(1,6)
+# random.randint(1,6)
+
+# dado = random.randint(1,6)
+
+# print (dado)
+
+# frutas = ["manzana", "banana", "naranja", "pera"]
+# frutas_elegidas = random.choice(frutas)
+# print(frutas_elegidas)
+
+# numeros = [1,5,6,97,3]
+# random.shuffle(numeros)
+# print(numeros)
+
+
+from colorama import init, Fore, Back, Style
+init(autoreset=True)
+
+print(Fore.GREEN + "Mensaje de éxito en verde")
