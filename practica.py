@@ -617,7 +617,70 @@
 # print(numeros)
 
 
-from colorama import init, Fore, Back, Style
-init(autoreset=True)
+# from colorama import init, Fore, Back, Style
+# init(autoreset=True)
 
-print(Fore.GREEN + "Mensaje de éxito en verde")
+# print(Fore.GREEN + "Mensaje de éxito en verde")
+
+#______________________________________________________________________________________________________________________________________________
+
+#CLASE 12
+
+#Escritura de archivos
+
+archivo = open("nombres.txt", "w")
+
+
+archivo.write("Maria\n") #te permite escribir en el archivo, si no existe lo crea, si existe lo sobreescribe
+archivo.write("Ana\n")
+archivo.write("Juan\n")
+
+
+archivo.close() #close() cierra el archivo, es importante cerrarlo para que se guarden los cambios y no quede abierto
+
+
+archivo = open("nombre.txt", "a") #modo append, agrega al final del archivo sin borrar lo que ya estaba
+
+archivo.write("Sofia\n")
+
+archivo.close()
+
+
+
+
+#Exepciones 
+try:
+    archivo_inexistente = open("archivo_inexixtente.txt", "r")
+    contenido = archivo_inexistente.read()
+    print(contenido)
+    archivo_inexistente.close()
+except FileNotFoundError:
+    print("[Error] El archivo no fue encontrado")
+    print("   Verifica el nombre o la ruta del archivo")
+
+#VALUEErrror = valor invalido para una función
+#TypeError = tipo de dato incorrecto
+#IndexERrror = indice fuera de rango
+#KeyError = clave inexistente en un diccionario
+# ZeroDivisionError= division por cero
+#importError = modulo que no se puede importar
+
+
+#INTRODUCCIÓN A BASE DE DATOS BBDD (SQL)
+
+import sqlite3
+conexion = sqlite3.connect("talento.db")
+lapiz = conexion.cursor()
+lapiz.execute("""
+    CREATE TABLE IF NOT EXISTS clientes (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        nombre TEXT NOT NULL,
+        apellido TEXT NOT NULL,
+        correo TEXT NOT NULL
+    )
+""")
+conexion.commit()
+conexion.close()
+
+
+
